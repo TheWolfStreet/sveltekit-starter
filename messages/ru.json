@@ -1,0 +1,15 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Привет, {name}!",
+	"settings": "Настройки",
+	"settings_description": "Ваши предпочтения и внешний вид",
+	"language": "Язык",
+	"theme": "Тема",
+	"cancel": "Отмена",
+	"done": "Готово",
+	"themes": {
+		"light": "Светлая",
+		"dark": "Тёмная",
+		"system": "Системная"
+	}
+}

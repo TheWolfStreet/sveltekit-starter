@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@import './font.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+	--color-body: var(--color-gray-950);
+	--color-muted: var(--color-gray-500);
+	--color-surface: color-mix(in srgb, var(--color-white) 95%, transparent);
+	--color-surface-alt: var(--color-slate-50);
+	--color-edge: color-mix(in srgb, var(--color-gray-200) 50%, transparent);
+	--color-edge-subtle: color-mix(in srgb, var(--color-gray-950) 5%, transparent);
+	--color-tint: color-mix(in srgb, var(--color-gray-950) 5%, transparent);
+
+	--color-primary: var(--color-gray-900);
+	--color-primary-dark: var(--color-white);
+
+	--color-body-dark: var(--color-gray-50);
+	--color-muted-dark: var(--color-slate-400);
+	--color-surface-dark: color-mix(in srgb, var(--color-gray-950) 95%, transparent);
+	--color-surface-alt-dark: var(--color-gray-900);
+	--color-edge-dark: color-mix(in srgb, var(--color-gray-800) 50%, transparent);
+	--color-edge-subtle-dark: color-mix(in srgb, var(--color-white) 5%, transparent);
+	--color-tint-dark: color-mix(in srgb, var(--color-gray-950) 20%, transparent);
+
+	--color-secondary: var(--color-gray-100);
+	--color-secondary-dark: var(--color-gray-800);
+}
+
+html.dark {
+	@apply bg-surface-dark text-body-dark;
+}
+
+html {
+	@apply bg-surface text-body;
+	@apply m-0 overflow-x-hidden p-0 select-none;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-smooth: never;
+}
+
+* {
+	@apply transition-colors duration-300 motion-reduce:transition-none!;
+}
+
+*:focus:focus-visible {
+	outline: 0 0 0 1px var(--color-body);
+}

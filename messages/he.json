@@ -1,0 +1,15 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "שלום, {name}!",
+	"settings": "הגדרות",
+	"settings_description": "התאם את ההעדפות והמראה שלך",
+	"language": "שפה",
+	"theme": "ערכת נושא",
+	"cancel": "ביטול",
+	"done": "סיום",
+	"themes": {
+		"light": "בהיר",
+		"dark": "כהה",
+		"system": "מערכת"
+	}
+}
